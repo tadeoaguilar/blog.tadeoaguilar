@@ -1,7 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  
+}
 p {
   margin: 15px 0;
   line-height: 1.8;
@@ -47,4 +55,44 @@ ol {
 }
 .bg-red-600 {
   background-color: #a70b34;
+}
+
+#black-right {
+  animation: wheel 5s  infinite;
+  transform-origin: center;
+  
+  
+}
+#purple-left {
+  animation: wheel 5s  infinite;
+  transform-origin: center;
+  
+  
+}
+#purple-right {
+  animation: logo 5s  infinite;
+    
+  
+}
+#black-left {
+  animation: logo 5s  infinite;
+}
+
+@keyframes logo {
+  from{
+    transform: rotateY(0deg)
+  }
+  to{
+    transform: rotateY(50deg)
+  }
+
+}
+@keyframes wheel {
+  from{
+    transform: rotateZ(360deg)
+  }
+  to{
+    transform: rotateZ(0deg)
+  }
+
 }
